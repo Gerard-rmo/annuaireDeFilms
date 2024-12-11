@@ -1,0 +1,371 @@
+html {
+  background-image: url(./assets/lebon.jpg);
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background-color: #9865659d;
+  color: rgb(35, 45, 92);
+  transition: background-color 0.5s, color 0.5s;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+/* ----------------------------- la navbar + logo-------------------------  */
+
+nav {
+  background-color: #5d5da9;
+  height: 10%;
+  text-align: center;
+  align-items: center;
+  padding: 10px;
+  font-family: Georgia, "Times New Roman", Times, serif, sans-serif;
+  font-size: 20px;
+  color: #f8f8ff;
+  text-decoration: none;
+  display: flex;
+  justify-content: space-around;
+}
+.logo {
+  width: 70px;
+  height: 70px;
+  border-radius: 50px;
+  border: solid, 5px, orange;
+  float: left;
+}
+
+/* ---------Bouton jour/nuit--------------------- */
+#toggleButton {
+  color: aliceblue;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 15px;
+  border: 5px solid #800000;
+  background-color: #000080;
+  border-radius: 50%;
+  padding: 5px;
+}
+a {
+  color: #f8f8ff;
+  text-decoration: none;
+}
+/* }----------mode nuit---------------------  */
+
+body.dark-mode {
+  background-color: rgb(8, 4, 61);
+  color: white;
+}
+/* 
+
+/* ---------------barre de recherche--------------  */
+.search-container {
+  display: flex;
+
+  align-items: center;
+}
+
+#searchBar {
+  padding: 5px;
+  font-size: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px 0 0 4px;
+  outline: none;
+}
+
+button {
+  padding: 5px;
+  font-size: 15px;
+  border: 1px solid #ccc;
+  border-left: none;
+  border-radius: 0 4px 4px 0;
+  background-color: #986565;
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+/* ----------------TITRE H1---------------   */
+.titre,
+.titres {
+  width: 500px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  text-align: center;
+  text-decoration: underline;
+  font-size: 70px;
+  color: #000080;
+  background-color: #f8f8ff;
+  margin: 10px auto;
+  padding: 5px;
+  border-radius: 20px;
+  opacity: 70%;
+}
+
+/* -----------------carousel------------------ */
+.carousel {
+  position: relative;
+  width: 600px;
+  height: 800px;
+  max-width: 600px;
+  margin: 3em auto;
+  aspect-ratio: 16/9;
+  overflow: hidden;
+  display: flex;
+  background-color: white;
+  border-radius: 2em;
+  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset,
+    rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset,
+    rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px,
+    rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px,
+    rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+.slide {
+  display: inline-block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 1s;
+}
+.slide.active {
+  opacity: 1;
+}
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.controls {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.prev,
+.next {
+  position: absolute;
+  font-size: 3em;
+  font-weight: bold;
+  padding: 10px;
+  cursor: pointer;
+  color: black;
+  text-decoration: none;
+}
+.prev {
+  left: 0px;
+}
+.next {
+  right: 0px;
+}
+/* ------------------------------------------------------  */
+
+.presentation {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 30px;
+  background-color: #c5c5ca;
+  opacity: 90%;
+  margin: 10px 15%;
+  padding: 5px 2px;
+  border-radius: 20px;
+}
+.presentationTexte {
+  margin: auto;
+}
+
+/* ------------Formulaire de contact---------------- */
+
+.h3Contact {
+  width: 250px;
+  text-align: center;
+  text-decoration: underline;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 30px;
+  background-color: #c5c5ca;
+  margin: 10px auto;
+  border-radius: 20px;
+}
+.formContact {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  min-width: 300px;
+  padding: 0 20%;
+  margin: 10px auto;
+}
+.inputContact {
+  margin: 10px 10%;
+  padding: 5px;
+  border: 3px solid #007acc;
+}
+.textaContact {
+  width: 100%;
+  border: 3px solid #007acc;
+  margin-top: 5px;
+}
+.submitContact {
+  margin: 10px 80px 30px 80px;
+  padding: 5px;
+  border-radius: 20px;
+  background-color: #28a745;
+}
+.submitContact:hover {
+  background-color: #5435dc; /* On modifie la couleur du fond au passage de la souris */
+}
+
+footer {
+  display: flex;
+  justify-content: space-around;
+  background-color: #5d5da9;
+}
+
+.contact {
+  font-size: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  text-decoration: none;
+  text-align: center;
+  color: black;
+  padding: 10px;
+  margin: 15px;
+  background-color: #cb9c9c;
+  border-radius: 20px;
+}
+.contact:hover {
+  background-color: #a25b38; /* On modifie la couleur du fond au passage de la souris */
+}
+.facebook {
+  height: 50px;
+  width: 50px;
+  padding: 0 50px;
+  margin: 10px;
+  border-radius: 50%;
+}
+.instagram {
+  height: 50px;
+  width: 50px;
+  margin: 10px;
+  border-radius: 50%;
+}
+/* --------------------------------------- */
+
+/* ---------------annuaire--------------------- */
+
+.h3t {
+  text-align: center;
+}
+
+.categories {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 20px;
+}
+.peplum {
+  background-color: #c5c5ca;
+  padding: 5px 5px 15px 25px;
+  margin: 5px 50% 15px 5px;
+  border-radius: 5px;
+  opacity: 90%;
+}
+.western {
+  background-color: #c5c5ca;
+  padding: 5px 5px 15px 25px;
+  margin: 5px 50% 15px 5px;
+  border-radius: 5px;
+  opacity: 90%;
+}
+.muet {
+  background-color: #c5c5ca;
+  padding: 5px 5px 15px 25px;
+  margin: 5px 50% 30px 5px;
+  border-radius: 5px;
+  opacity: 90%;
+}
+
+/* -------------------fiche film----------------------------------  */
+.titrejs {
+  font-size: 60px;
+}
+.anneejs {
+  font-size: 20px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  width: 200px;
+  margin: 30px auto;
+}
+.posterjs {
+  width: 400px;
+  height: 550px;
+  border-radius: 11px;
+}
+.acteursjs {
+  font-size: 20px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+.textejs {
+  font-size: 20px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  margin: 40px;
+}
+/* --------------------------------------------------------------------------------------------------------  */
+h2 {
+  text-align: center;
+  text-decoration: underline;
+  background-color: #c5c5ca;
+  opacity: 90%;
+  border-radius: 20px;
+  padding: 10px;
+  margin: 0 35%;
+  margin-top: 10px;
+}
+h3 {
+  text-align: center;
+  text-decoration: underline;
+  font-size: 30px;
+}
+p {
+  text-align: center;
+  background-color: #c5c5ca;
+  opacity: 90%;
+  margin: 0 20% 20px 20%;
+  padding: 15px;
+  border-radius: 20px;
+}
+img {
+  margin: 10px auto;
+  display: block;
+  height: 400px;
+  width: 300px;
+}
+.detail {
+  width: 300px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  text-align: center;
+  text-decoration: underline;
+  font-size: 25px;
+  color: #000080;
+  background-color: #f8f8ff;
+  margin: 10px auto;
+  padding: 5px;
+  border-radius: 20px;
+  opacity: 70%;
+  display: block;
+}
+
+@media screen and (max-width: 700px) {
+  /* nav {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  } */
+  .titrejs {
+    font-size: 30px;
+    width: 50vw;
+    margin: 10px auto;
+  }
+  .titres {
+    font-size: 30px;
+    width: 50vw;
+  }
+}

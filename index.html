@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Vint'age</title>
+</head>
+<body>
+    <header>
+
+        <!-- Début de la navbar -->
+     
+             <nav>
+     
+     <!-- Liens vers les différentes pages  -->
+    
+                        <a href="index.html"><img class="logo" src="./assets/logo.jpg" alt="logo vint'age" ></a>
+
+
+                         <button id="toggleButton" >NUIT</button>
+     
+                     
+                        <a href="categories.html"
+                         >ANNUAIRE</a>
+     
+                         <div class="search-container">
+                          <input type="text" id="searchBar" value=""  placeholder="Entrez le nom du film.">
+                         <button type="button"  id="search" onclick="getValue()" >Rechercher</button></div>
+
+                          
+             </nav>
+     <!-- Fin de la nav bar -->
+      </header>
+
+     <!-- Début du main  -->
+
+     <main>
+
+        <h1 class="titre">VINT'AGE</h1>
+
+        <!-- début du carroussel -->
+
+        <section class="carousel">
+
+            <div class="slide">
+              <img src="./assets/Cleopatre.jpg" alt="affiche du film Cleopatre">
+            </div>
+            <div class="slide">
+                <img src="./assets/lhommeAuxColtsDor.jpg" alt="affiche du film l'homme aux colts d'or">
+              </div>
+              <div class="slide">
+                <img src="./assets/Le_Dernier_des_hommes.jpg" alt="affiche du film le dernier des hommes">
+              </div>
+              <div class="slide">
+                <img src="./assets/Riobravo.jpg" alt="affiche du film Rio Bravo">
+              </div>
+              <div class="slide">
+                <img src="./assets/quo vadis.jpg" alt="affiche du film Quo Vadis ?">
+              </div>
+            <div class="slide">
+              <img src="./assets/eastwood.png" alt="affiche du film l'homme des hautes plaines">
+            </div>
+    
+    
+             <div class="controls">
+              <a class="prev" onclick="changeSlide(-1)">&#10094</a>
+              <a class="next" onclick="changeSlide(1)">&#10095</a>
+             </div>
+        </section>
+
+        <!-- fin du carroussel -->
+
+        <!-- debut du paragraphe de presentation -->
+
+        <section class="presentation">
+            <p class="presentationTexte"><strong>
+                Vint'age est un annuaire de vieux films de tous les genres, fait par un groupe de passionnés des films d'antant. Nous avons regroupé ces films par catégories que nous vous invitons à découvrir, dans l'onglet "catégories". Vous pourrez vous plonger dans ces anciennes productions qui ont contribué à l'essor du cinéma moderne. Cet annuaire étant évolutif, n'hésitez pas à nous contacter pour nous proposer d'aggrementer notre cinémathèque.
+            </strong></p>
+        </section>
+    </main>
+    <div id="films"></div>
+
+    <footer>
+            <!-- Début des liens de contact et réseaux sociaux  -->
+                   
+                   <a  href="www.facebook"><img class="facebook" src="./assets/FB.jpg" alt="logo facebook"
+                   ></a>
+           
+                   <a  href="instagram"><img class="instagram" src="./assets/insta.webp" alt="logo instagram" ></a>
+
+
+                   <a class="contact" href="contact.html">Contactez-nous</a>
+                   
+           <!-- Fin du bloc footer  -->
+           
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
