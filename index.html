@@ -15,18 +15,21 @@
      
      <!-- Liens vers les différentes pages  -->
     
-                        <a href="index.html"><img class="logo" src="./assets/logo.jpg" alt="logo vint'age" ></a>
-
-
-                         <button id="toggleButton" >NUIT</button>
-     
+                        <a href="index.html"><img class="logo" src="./assets/logo.jpg" alt="logo vint'age" ></a> 
                      
                         <a href="categories.html"
-                         >ANNUAIRE</a>
-     
-                         <div class="search-container">
-                          <input type="text" id="searchBar" value=""  placeholder="Entrez le nom du film.">
-                         <button type="button"  id="search" onclick="getValue()" >Rechercher</button></div>
+                         class="navA">ANNUAIRE</a>
+
+                         <a class="contact" href="contact.html">Contactez-nous</a>
+
+                          <div class="toggle">
+                            <input type="checkbox" class="checkbox" id="darkMode">
+                            <label for="darkMode" class="label">
+                            <span class="moon">&#9790;</span>
+                            <span class="sun">&#9788;</span>
+                            <div class="circle"></div>
+                          </label>
+                        </div>
 
                           
              </nav>
@@ -38,6 +41,13 @@
      <main>
 
         <h1 class="titre">VINT'AGE</h1>
+
+        <!-- Début de la barre de recherche  -->
+
+        <div class="search-container">
+          <input type="text" id="searchBar" value=""  placeholder="Entrez le nom du film.">
+         <button type="button"  id="search" onclick="getValue()" >Rechercher</button>
+        </div>
 
         <!-- début du carroussel -->
 
@@ -74,11 +84,15 @@
         <!-- debut du paragraphe de presentation -->
 
         <section class="presentation">
+          
             <p class="presentationTexte"><strong>
                 Vint'age est un annuaire de vieux films de tous les genres, fait par un groupe de passionnés des films d'antant. Nous avons regroupé ces films par catégories que nous vous invitons à découvrir, dans l'onglet "catégories". Vous pourrez vous plonger dans ces anciennes productions qui ont contribué à l'essor du cinéma moderne. Cet annuaire étant évolutif, n'hésitez pas à nous contacter pour nous proposer d'aggrementer notre cinémathèque.
             </strong></p>
+
         </section>
+
     </main>
+
     <div id="films"></div>
 
     <footer>
@@ -88,7 +102,6 @@
                    ></a>
            
                    <a  href="instagram"><img class="instagram" src="./assets/insta.webp" alt="logo instagram" ></a>
-
 
                    <a class="contact" href="contact.html">Contactez-nous</a>
                    

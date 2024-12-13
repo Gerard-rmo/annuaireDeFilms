@@ -22,10 +22,8 @@ nav {
   align-items: center;
   padding: 10px;
   font-family: Georgia, "Times New Roman", Times, serif, sans-serif;
-  font-size: 20px;
-  color: #f8f8ff;
-  text-decoration: none;
   display: flex;
+  /* flex-wrap: wrap; */
   justify-content: space-around;
 }
 .logo {
@@ -35,39 +33,91 @@ nav {
   border: solid, 5px, orange;
   float: left;
 }
-
-/* ---------Bouton jour/nuit--------------------- */
-#toggleButton {
-  color: aliceblue;
-  font-family: Georgia, "Times New Roman", Times, serif;
-  font-size: 15px;
-  border: 5px solid #800000;
-  background-color: #000080;
-  border-radius: 50%;
-  padding: 5px;
-}
-a {
+.navA {
+  font-size: 20px;
   color: #f8f8ff;
   text-decoration: none;
 }
+.navAc {
+  font-size: 20px;
+  color: #f8f8ff;
+  text-decoration: none;
+}
+
+/* ---------Bouton jour/nuit--------------------- */
+.toggle {
+  right: 20px;
+  top: 40px;
+  margin-left: 20px;
+}
+.checkbox {
+  display: none;
+}
+.checkbox:checked + .label .circle {
+  transform: translate(29px);
+}
+
+.label {
+  background: #cb9c9c;
+  height: 26px;
+  width: 50px;
+  padding: 5px 8px;
+  border-radius: 20%;
+  cursor: pointer;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  align-items: center;
+  position: relative;
+  transform: scale(1.2);
+}
+.moon,
+.sun {
+  font-size: 1.3rem;
+  text-align: center;
+}
+.sun {
+  transform: translate(3px, -1px);
+}
+.moon {
+  transform: translate(-3px, -1px) rotate(-10deg);
+}
+.circle {
+  background: #eee;
+  border-radius: 50%;
+  height: 26px;
+  width: 26px;
+  position: absolute;
+  top: 5px;
+  left: 6px;
+  transition: transform 0.4s cubic-bezier(0.45, -1.12, 0.35, 1.78);
+}
+
 /* }----------mode nuit---------------------  */
 
-body.dark-mode {
+.dark {
   background-color: rgb(8, 4, 61);
   color: white;
+}
+.dark .label {
+  box-shadow: 2px 2px 2px #a25b38;
+  background: #000080;
+}
+.dark .circle {
+  background: #a25b38;
 }
 /* 
 
 /* ---------------barre de recherche--------------  */
 .search-container {
   display: flex;
-
+  justify-content: center;
   align-items: center;
+  margin-top: 30px;
 }
 
 #searchBar {
   padding: 5px;
-  font-size: 15px;
+  font-size: 20px;
   border: 1px solid #ccc;
   border-radius: 4px 0 0 4px;
   outline: none;
@@ -75,11 +125,11 @@ body.dark-mode {
 
 button {
   padding: 5px;
-  font-size: 15px;
+  font-size: 20px;
   border: 1px solid #ccc;
   border-left: none;
   border-radius: 0 4px 4px 0;
-  background-color: #986565;
+  background-color: #000080;
   color: white;
   cursor: pointer;
 }
@@ -101,6 +151,9 @@ button:hover {
   padding: 5px;
   border-radius: 20px;
   opacity: 70%;
+}
+.titres {
+  margin-top: 60px;
 }
 
 /* -----------------carousel------------------ */
@@ -162,19 +215,23 @@ button:hover {
 .next {
   right: 0px;
 }
-/* ------------------------------------------------------  */
+/* ---------------Texte de présentation----------------  */
 
 .presentation {
+  grid-template-rows: 300px;
   font-family: Georgia, "Times New Roman", Times, serif;
   font-size: 30px;
-  background-color: #c5c5ca;
-  opacity: 90%;
-  margin: 10px 15%;
+  margin: 10px 30px;
   padding: 5px 2px;
   border-radius: 20px;
+  grid-column-gap: 20px;
 }
 .presentationTexte {
   margin: auto;
+  grid-column: 1/2;
+  grid-row: 1/2;
+  background-color: #c5c5ca;
+  opacity: 90%;
 }
 
 /* ------------Formulaire de contact---------------- */
@@ -256,11 +313,12 @@ footer {
 
 .h3t {
   text-align: center;
+  font-size: 25px;
 }
 
 .categories {
   font-family: Georgia, "Times New Roman", Times, serif;
-  font-size: 20px;
+  font-size: 15px;
 }
 .peplum {
   background-color: #c5c5ca;
@@ -285,6 +343,7 @@ footer {
 }
 
 /* -------------------fiche film----------------------------------  */
+
 .titrejs {
   font-size: 60px;
 }
@@ -295,8 +354,8 @@ footer {
   margin: 30px auto;
 }
 .posterjs {
-  width: 400px;
-  height: 550px;
+  width: 450px;
+  height: 650px;
   border-radius: 11px;
 }
 .acteursjs {
@@ -352,20 +411,33 @@ img {
   opacity: 70%;
   display: block;
 }
+.affiche0 {
+  height: 600px;
+  width: 450px;
+}
 
-@media screen and (max-width: 700px) {
-  /* nav {
+@media screen and (max-width: 750px) {
+  nav {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-  } */
+  }
   .titrejs {
     font-size: 30px;
     width: 50vw;
     margin: 10px auto;
   }
+  .posterjs {
+    width: 400px;
+    height: 550px;
+    border-radius: 11px;
+  }
   .titres {
     font-size: 30px;
     width: 50vw;
+  }
+
+  .presentationTexte {
+    font-size: 20px;
   }
 }

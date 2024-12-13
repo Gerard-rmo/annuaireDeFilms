@@ -1,20 +1,8 @@
 //---------------Bouton jour/nuit--------------
 
-const toggleButton = document.getElementById("toggleButton");
-toggleButton.addEventListener("click", () => {
-  document.body.classList.toggle("dark-mode");
-  if (document.body.classList.contains("dark-mode")) {
-    toggleButton.textContent = "JOUR";
-  } else {
-    toggleButton.textContent = "NUIT";
-  }
+darkMode.addEventListener("click", () => {
+  document.body.classList.toggle("dark");
 });
-
-//------------barre de recherche----------------
-
-// function search() {
-//   const query = document.getElementById("search").value;
-// }
 
 //-------------------carousel-------------------
 let idx = 0;
@@ -74,11 +62,17 @@ function getValue() {
         let HTML = `
       <h1 class="titres">${data.Title}</h1>
       <img src="${data.Poster}" alt="Poster of
-      ${data.Title}">
+      ${data.Title}" class="affiche0">
       <p class="anneejs"> ${data.Year}</p>
       <a href="./film.html?id=${data.imdbID}" class="detail">Voir détail</a>
       `;
         document.getElementById("films").innerHTML += HTML;
+        window.scrollTo({
+          top: 1000,
+          left: 100,
+          // top: document.body.scrollHeight,
+          behavior: "smooth",
+        });
       }
     })
     .catch((error) => {
