@@ -89,7 +89,7 @@ nav {
   position: absolute;
   top: 5px;
   left: 6px;
-  transition: transform 0.4s cubic-bezier(0.45, -1.12, 0.35, 1.78);
+  transition: transform 0.8s cubic-bezier(0.45, -1.12, 0.35, 1.78);
 }
 
 /* }----------mode nuit---------------------  */
@@ -161,7 +161,7 @@ button:hover {
   position: relative;
   width: 600px;
   height: 800px;
-  max-width: 600px;
+  /* max-width: 600px; */
   margin: 3em auto;
   aspect-ratio: 16/9;
   overflow: hidden;
@@ -218,9 +218,8 @@ button:hover {
 /* ---------------Texte de présentation----------------  */
 
 .presentation {
-  grid-template-rows: 300px;
   font-family: Georgia, "Times New Roman", Times, serif;
-  font-size: 30px;
+  font-size: 25px;
   margin: 10px 30px;
   padding: 5px 2px;
   border-radius: 20px;
@@ -263,6 +262,7 @@ button:hover {
   width: 100%;
   border: 3px solid #007acc;
   margin-top: 5px;
+  margin: auto;
 }
 .submitContact {
   margin: 10px 80px 30px 80px;
@@ -345,7 +345,7 @@ footer {
 /* -------------------fiche film----------------------------------  */
 
 .titrejs {
-  font-size: 60px;
+  font-size: 50px;
 }
 .anneejs {
   font-size: 20px;
@@ -416,7 +416,7 @@ img {
   width: 450px;
 }
 
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 850px) {
   nav {
     display: flex;
     flex-wrap: wrap;
@@ -436,8 +436,95 @@ img {
     font-size: 30px;
     width: 50vw;
   }
+  .affiche0 {
+    height: 500px;
+    width: 350px;
+  }
 
   .presentationTexte {
     font-size: 20px;
+  }
+
+  .carousel {
+    width: 400px;
+    height: 550px;
+  }
+  .titre {
+    width: 400px;
+    font-size: 40px;
+  }
+}
+
+@media screen and (max-width: 435px) {
+  nav {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  .titrejs {
+    font-size: 30px;
+    width: 30px;
+    margin: 5px auto;
+  }
+  .posterjs {
+    width: 200px;
+    height: 300px;
+    border-radius: 11px;
+  }
+  .titres {
+    font-size: 30px;
+    width: 30px;
+  }
+  .affiche0 {
+    height: 300px;
+    width: 150px;
+  }
+
+  .presentationTexte {
+    font-size: 10px;
+  }
+
+  .carousel {
+    width: 250px;
+    height: 400px;
+  }
+  .titre {
+    width: 200px;
+    font-size: 20px;
+  }
+  .contact {
+    font-size: 15px;
+    width: 75px;
+  }
+  .navA {
+    font-size: 15px;
+    margin: 0 5px;
+  }
+  .navAc {
+    font-size: 15px;
+  }
+  .facebook {
+    height: 30px;
+    width: 30px;
+    margin-top: 30px;
+  }
+  .instagram {
+    height: 30px;
+    width: 30px;
+    margin-top: 30px;
+  }
+  #searchBar {
+    font-size: 15px;
+  }
+  button {
+    font-size: 15px;
+  }
+  .titrejs {
+    font-size: 20px;
+    width: 150px;
+  }
+  .titres {
+    font-size: 20px;
+    width: 150px;
   }
 }
